@@ -200,3 +200,29 @@ form input[type="submit"]:hover {
         padding: 10px; /* Ajusta el padding del formulario */
     }
 }
+
+/* Estilos para el ícono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Color verde más oscuro de WhatsApp al pasar el cursor */
+    transform: scale(1.1); /* Efecto de zoom en hover */
+}
+
