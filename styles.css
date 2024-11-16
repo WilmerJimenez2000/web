@@ -34,12 +34,16 @@ slider-container {
 .slide {
     min-width: 100%;
     height: 100%;
+    display: flex; /* Usamos flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 .slide img {
     width: 25%;
     height: auto;
 }
+
 
 button {
     position: absolute;
