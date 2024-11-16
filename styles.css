@@ -17,34 +17,40 @@ header {
 }
 
 
-
-slider-container {
+/* Contenedor del slider */
+.slider-container {
     position: relative;
-    width: 80%;
-    max-width: 800px;
+    width: 100%; /* Usar el 100% del ancho disponible */
+    max-width: 100%; /* Límite máximo de ancho */
     margin: 50px auto;
     overflow: hidden;
 }
 
+/* Slider */
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+
 }
 
+/* Cada slide */
 .slide {
-    min-width: 100%;
-    height: 100%;
-    display: flex; /* Usamos flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
+/* Estilos para las imágenes */
 .slide img {
-    width: 25%;
-    height: auto;
+    width: 25%; /* La imagen ocupará el 100% del ancho del slide */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: cover; /* La imagen cubrirá todo el contenedor sin deformarse */
 }
 
-
+/* Estilos para los botones */
 button {
     position: absolute;
     top: 50%;
@@ -56,19 +62,56 @@ button {
     font-size: 20px;
     transform: translateY(-50%);
     z-index: 10;
+    border-radius: 5px;
 }
 
+/* Botón para ir hacia atrás */
 .prev {
     left: 10px;
 }
 
+/* Botón para ir hacia adelante */
 .next {
     right: 10px;
 }
 
+/* Cambiar el color de los botones al pasar el mouse */
 button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+/* Media query para pantallas más pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    .slider-container {
+        margin: 20px auto;
+    }
+
+    .slide img {
+        width: 90%; /* La imagen ocupará el 90% del ancho en pantallas pequeñas */
+        height: auto;
+    }
+
+    button {
+        padding: 8px; /* Reducir el tamaño del botón en pantallas pequeñas */
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        margin: 10px auto;
+    }
+
+    .slide img {
+        width: 100%; /* Las imágenes ocuparán el 100% del contenedor */
+    }
+
+    button {
+        padding: 5px; /* Asegurarse de que los botones no sean demasiado grandes */
+        font-size: 16px;
+    }
+}
+
 
 
 nav {
