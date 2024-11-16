@@ -15,3 +15,8 @@ function moveSlide(step) {
     const slider = document.querySelector(".slider");
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+// Mueve las slides automáticamente cada 2 segundos
+setInterval(() => {
+    moveSlide(1); // Avanza una slide
+}, 5000);
